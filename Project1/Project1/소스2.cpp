@@ -4,17 +4,43 @@
 using namespace std;
 
 int main() {
-	//C++ 에서 문자열을 다루는 방법중 하나인 string
-	const int Size = 15;
-	char name1[Size];
-	char name2[Size] = "C++programing";
+	//구조체
 
-	cout << "안녕하세요 저는" << name2;
-	cout << "입니다 성함이 어떻게 되시나요?\n";
-	//cin >> name1; // 입력값을 name1 에 저장한다
-	cin.getline(name1, Size);
-	cout << "음, " << name1 << "씨,당신의 이름은";
+	//ex)축구선수
+	struct MyStruct
+	{
+		string name;
+		string position;
+		float height;
+		float weight;
+	};
 
+	MyStruct A;
+	A.name = "son";
+	A.position = "striker";
+	A.height = 183;
+	A.weight = 77;
 
+	//공용체
+	union MyUnion
+	{
+		int intVal;
+		long longVal;
+		float floatVal;
+	};
+
+	//열거체(enum)
+	//기호 상수를 만드는 방법
+
+	enum spectrum {
+		red,orange,yellow,green,blue,violet,indigo,ultraviolet
+	};
+	/*
+	* 1.spectrum을 새로운 데이터형 이름으로 만듭니다.
+	* 2.red,orange,yellow 0에서 7까지 정수값을 각각 나타내는 기호상수로 만듭니다.
+	*/
+	
+	spectrum a = orange;
+	cout << a << endl;
 	return 0;
 }
