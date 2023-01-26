@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() {
+int main3() {
 	//구조체
 
 	//ex)축구선수
