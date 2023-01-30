@@ -1,12 +1,17 @@
-#include "struct.h"
-//헤더 파일을 여러 파일에 포함시킬때, 단 한번만 포함시킨다
+#include<iostream>
+#include"time.h"
+using namespace std;
+
 int main() {
-    MyStruct PandaCoding = {
-        "Panda",
-        26,
-    };
+	Time day1(1, 40);
+	Time day2(2, 30);
 
-    display(PandaCoding);
-    return 0;
+	day1.show();
+	day2.show();
+
+	Time total;
+	total = day1+day2;
+	total.show();
+
+	return 0;
 }
-
